@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 mongoose.connect(
-    'mongodb+srv://user:aN41&82@cluster0-dzvce.mongodb.net/test?retryWrites=true&w=majority',
+    'mongodb+srv://<user>:<password>@cluster0-dzvce.mongodb.net/test?retryWrites=true&w=majority',
     {useNewUrlParser: true}
 );
 const db = mongoose.connection;
