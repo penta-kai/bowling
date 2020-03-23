@@ -24,7 +24,7 @@ curl -X PUT -v -d '{"first": 10, "second": 0}' -H "Content-Type:application/json
 
 > strike + bonus
 ```curl
-curl -X PUT -v -d '{"first": 10, "second": 0, "third": 7}' -H "Content-Type:application/json" http://localhost:3000/scores
+curl -X PUT -v -d '{"first": 10, "second": 3, "third": 7}' -H "Content-Type:application/json" http://localhost:3000/scores
 ```
 
 ```curl

@@ -7,19 +7,19 @@ const {
 } = require('../constants');
 
 class ScoreService {
-    static getScore(frames) {     
+    static getScore(frames) {
         let totalScore = 0;
-            
+        let score = 0;
+        let frame = null;
+        let nextFrame = null;    
         const framesCount = frames.length;
         for (let iter = 0; iter < framesCount; iter++) {
-            let score = 0;
-            let frame = frames[iter];
+            score = 0;
+            frame = frames[iter];
+            nextFrame = null;
             let isLast = frame.index === LAST_FRAME_INDEX;
-            let nextFrame = null;
-            
-            if (frame.type === TYPE_STRIKE) {
-                console.log(frame, LAST_FRAME_INDEX, isLast);
-                
+
+            if (frame.type === TYPE_STRIKE) {                
                 if (isLast) {
                     score = getFrameScore(frame, true);
                 } else {
@@ -63,9 +63,7 @@ class ScoreService {
 
 module.exports = ScoreService;
 
-function getFrameScore(frame, isLast = false) {
-    console.log(frame.first + frame.second + (isLast && frame.third ? frame.third : 0), isLast);
-    
+function getFrameScore(frame, isLast = false) {    
     return frame.first + frame.second + (isLast && frame.third ? frame.third : 0);
 }
 

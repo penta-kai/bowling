@@ -7,9 +7,6 @@ const {
     LAST_FRAME_INDEX
 } = require('../constants');
 
-const BONUS = 10;
-
-
 class FrameService {    
     constructor(data, framesCount) {
         this.frame = new FramesModel(data);
