@@ -16,7 +16,7 @@
   "author": "penta kai",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-validator": "^6.4.0",
     "mongoose": "^5.9.5"
   },
